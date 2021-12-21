@@ -130,7 +130,13 @@ form[weather-using-city-name] button img {
 }
 
 #weather-information div[weather-patterns] {
-  padding: 1rem;
+  width: 140px;
+  height: 140px;
+  padding: 1.5rem 0;
+}
+
+#weather-information div[weather-patterns] img {
+  width: 100%;
 }
 
 #weather-information ul {

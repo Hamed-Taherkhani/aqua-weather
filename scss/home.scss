@@ -89,7 +89,13 @@ form[weather-using-city-name] {
   }
 
   div[weather-patterns] {
-    padding: 1rem;
+    width: 140px;
+    height: 140px;
+    padding: 1.5rem 0;
+
+    img {
+      width: 100%;
+    }
   }
 
   ul {

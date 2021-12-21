@@ -26,7 +26,8 @@ function fetchData() {
 
 const cityName = document.querySelector("#weather-information > h2"),
   weatherInfoElements = document.getElementsByClassName("weather-info"),
-  condition = document.querySelector("#conditions p");
+  condition = document.querySelector("#conditions p"),
+  icons = document.querySelector("#icons img");
 function putInfoOnPage(response) {
   // Set the weather condition:
   condition.textContent = response.current.condition.text;
@@ -51,6 +52,9 @@ function putInfoOnPage(response) {
 
   // Set the amount of clouds:
   weatherInfoElements[3].textContent = response.current.cloud;
+
+  // Set the icons:
+  icons.src = response.current.condition.icon;
 }
 
 function setCityNameOnRequest() {
