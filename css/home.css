@@ -32,6 +32,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -40,7 +43,7 @@ main {
 main h1 {
   color: #fff;
   font-size: 2.5rem;
-  margin: 10vmin;
+  margin-bottom: 10vmin;
 }
 
 form[weather-using-city-name] {
@@ -68,15 +71,38 @@ form[weather-using-city-name] input {
 }
 
 form[weather-using-city-name] button {
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
   margin-left: 0.5rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 form[weather-using-city-name] button img {
+  width: 80%;
+  height: auto;
+}
+
+#conditions {
   width: 100%;
-  height: 100%;
+  position: relative;
+  bottom: 1rem;
+}
+
+#conditions p {
+  text-align: right;
+  font-size: 0.85rem;
+  margin: 0 1rem 0;
 }
 
 #weather-information {
@@ -98,7 +124,9 @@ form[weather-using-city-name] button img {
 }
 
 #weather-information h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  max-width: 20rem;
+  text-align: center;
 }
 
 #weather-information div[weather-patterns] {
@@ -114,13 +142,18 @@ form[weather-using-city-name] button img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #weather-information ul li {
-  margin: 1rem;
+  padding: 0 1rem;
+  border-right: 1px rgba(255, 255, 255, 0.315) solid;
+}
+
+#weather-information ul li:last-child {
+  border: none;
 }
 
 #weather-information ul li section:nth-child(1) {
