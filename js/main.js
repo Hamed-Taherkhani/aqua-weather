@@ -34,9 +34,9 @@ function putInfoOnPage(response) {
 
   // Set the name of place
   cityName.textContent =
-    response.location.region +
-    ", " +
     response.location.name +
+    ", " +
+    response.location.region +
     ", " +
     response.location.country;
 

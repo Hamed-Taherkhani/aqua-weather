@@ -1,3 +1,8 @@
+* {
+  -webkit-transition: 700ms 300ms ease;
+  transition: 700ms 300ms ease;
+}
+
 button {
   cursor: pointer;
   outline: none;
@@ -68,6 +73,14 @@ form[weather-using-city-name] input {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #fff;
+  -webkit-transition: 300ms 100ms ease;
+  transition: 300ms 100ms ease;
+}
+
+form[weather-using-city-name] input:focus {
+  background: #fff;
+  color: #5e5e5e;
 }
 
 form[weather-using-city-name] button {
@@ -168,5 +181,11 @@ form[weather-using-city-name] button img {
 
 #weather-information ul li section:nth-child(2) {
   font-size: 0.7rem;
+}
+
+@media screen and (max-width: 425px) {
+  form[weather-using-city-name] {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=home.css.map */

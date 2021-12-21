@@ -1,6 +1,10 @@
 @import "./config";
 
 // General styles for each tags comes here:
+* {
+  transition: 700ms 300ms ease;
+}
+
 button {
   cursor: pointer;
   outline: none;
@@ -51,6 +55,13 @@ form[weather-using-city-name] {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    color: #fff;
+    transition: 300ms 100ms ease;
+
+    &:focus {
+      background: #fff;
+      color: rgb(94, 94, 94);
+    }
   }
 
   button {
@@ -118,5 +129,11 @@ form[weather-using-city-name] {
     li section:nth-child(2) {
       font-size: 0.7rem;
     }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  form[weather-using-city-name] {
+    width: 80%;
   }
 }
