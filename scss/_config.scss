@@ -1,0 +1,32 @@
+$body-bg-color: (
+  "color0": #3ea2e5,
+  "color1": #8bc5e3,
+);
+
+$btn-border-color: #fff;
+
+$input-bg-color: transparent;
+$input-text-color: #fff;
+$input-border-color: #fff;
+
+$radius: 10px;
+$web-title: (
+  color: #fff,
+  size: 2.5rem,
+);
+
+$weather-info-color: #fff;
+
+@mixin flex($dir, $justify, $align) {
+  display: flex;
+
+  @if ($dir != null) {
+    flex-direction: $dir;
+  }
+  @if ($justify != null) {
+    justify-content: $justify;
+  }
+  @if ($align != null) {
+    align-items: $align;
+  }
+}

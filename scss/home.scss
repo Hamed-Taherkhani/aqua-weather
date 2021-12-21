@@ -1,2 +1,96 @@
+@import "./config";
+
+// General styles for each tags comes here:
+button {
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid $btn-border-color;
+  border-radius: $radius;
+}
+
+input {
+  background-color: $input-bg-color;
+  outline: none;
+  border: $input-border-color 1px solid;
+  color: $input-text-color;
+  border-radius: $radius;
+}
+// -------------End-------------
+
 body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  background: linear-gradient(
+    map-get($body-bg-color, color0),
+    map-get($body-bg-color, color1)
+  );
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  @include flex(column, null, center);
+}
+
+main h1 {
+  color: map-get($web-title, color);
+  font-size: map-get($web-title, size);
+  margin: 10vmin;
+}
+
+form[weather-using-city-name] {
+  height: 2.5rem;
+  width: 55%;
+  max-width: 30rem;
+  @include flex(row, null, center);
+
+  input {
+    padding: 0.7rem 2rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  button {
+    align-self: stretch;
+    margin-left: 0.5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+#weather-information {
+  margin-bottom: 1rem;
+  color: $weather-info-color;
+  @include flex(column, center, center);
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  div[weather-patterns] {
+    padding: 1rem;
+  }
+
+  ul {
+    width: 100%;
+    @include flex(row, space-evenly, null);
+
+    li {
+      margin: 1rem;
+    }
+
+    li section:nth-child(1) {
+      font-size: 1.1rem;
+    }
+
+    li section:nth-child(2) {
+      font-size: 0.7rem;
+    }
+  }
 }

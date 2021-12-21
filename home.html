@@ -10,8 +10,58 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
     />
     <link rel="stylesheet" href="./css/home.css" />
+    <!-- Ubuntu font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End -->
   </head>
   <body>
+    <main>
+      <h1>Aqua Weather</h1>
+      <div id="weather-information">
+        <h2>City name</h2>
+        <div weather-patterns>
+          <img src="https://img.icons8.com/dusk/150/000000/sun--v1.png" />
+        </div>
+        <ul>
+          <li temperature>
+            <section class="weather-info">10 F</section>
+            <section>Temp</section>
+          </li>
+          <li humidity>
+            <section class="weather-info">37</section>
+            <section>Humidity</section>
+          </li>
+          <li uv>
+            <section class="weather-info">4.0</section>
+            <section>UV</section>
+          </li>
+          <li cloud>
+            <section class="weather-info">50</section>
+            <section>cloud</section>
+          </li>
+        </ul>
+      </div>
+      <form action="GET" weather-using-city-name>
+        <input
+          type="text"
+          name="city_name"
+          id="city-name"
+          placeholder="City name"
+        />
+        <button type="submit">
+          <img
+            src="https://img.icons8.com/material-outlined/48/ffffff/search--v1.png"
+            alt="Search"
+          />
+        </button>
+      </form>
+    </main>
+
     <script src="./js/main.js" type="module" defer></script>
   </body>
 </html>
